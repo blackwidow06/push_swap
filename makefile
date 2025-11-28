@@ -6,7 +6,10 @@ SRC = stack_utils.c \
 		rotate.c \
 		reverse.c \
 		parsing.c \
-
+		sort_utils.c \
+		radix.c \
+		join.c \
+		split.c
 
 OBJ = $(SRC:.c=.o)
 
@@ -22,5 +25,6 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
+
 
 re: fclean all

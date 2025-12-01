@@ -84,6 +84,7 @@ void	push_swap(stack *a, stack *b)
 	while (i < a->size)
 	{
 		a->value[i] = sorted[i];
+		i++;
 	}
 	free(sorted);
 }

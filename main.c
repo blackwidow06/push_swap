@@ -120,10 +120,22 @@ int main(int ac, char **av)
     split = parse_string(ac, av);
     if (!split)
         return (write(2, "Error\n", 6), 1);
+   i = 0;
+    while (split[i])
+    {
+        if (!check_int(split[i]))
+        {
+            free_split(split);
+            return(1);
+        }
+        i++;
+    }
     a.value = malloc(sizeof(int) * 100);
     b.value = malloc(sizeof(int) * 100);
+
     a.size = 0;
     b.size = 0;
+
     fill_stack(&a, split);
     free_split(split);
     i = 0;

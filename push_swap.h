@@ -41,6 +41,7 @@ void	free_split(char **tab);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	**parse_string(int ac, char *av[]);
 long long	ft_atoi(const char *str);
+int	check_int(const char *str);
 
 int     *copy_stack(stack *a);
 void    sort_stack(int *tab, int size);

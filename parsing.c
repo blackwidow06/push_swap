@@ -45,6 +45,18 @@ long long	ft_atoi(const char *str)
 	}
 	return (nbr * sign);
 }
+int	check_int(const char *str)
+{
+	long long	value;
+
+	value = ft_atoi(str);
+	if (value > 2147483647 || value < -2147483648)
+	{
+		write(2, "Error\n", 6);
+		return (0);
+	}
+	return (1);
+}
 int 	ft_duplicate(char **tab)
 {
 	int	i;
@@ -89,4 +101,5 @@ char	**parse_string(int ac, char *av[])
 		return (NULL);
 	}
 	return (split);
+
 }
